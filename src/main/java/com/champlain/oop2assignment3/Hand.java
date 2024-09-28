@@ -3,6 +3,7 @@ package com.champlain.oop2assignment3;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Represents a hand of playing cards.
@@ -11,7 +12,7 @@ import java.util.List;
  * It also provides an iterator to traverse the cards in the hand.
  * </p>
  */
-public class Hand extends CardCollection {
+public class Hand extends CardCollection implements ScoringStrategy  {
     /**
      * The list of cards in this hand.
      */
@@ -43,4 +44,23 @@ public class Hand extends CardCollection {
     public Iterator<Card> iterator() {
         return this.aCards.iterator();
     }
+
+    public int calculateScore(CardCollection pCards) {
+       int score = 0;
+        for (Card pCard : pCards) {
+           score = score +
+       }
+    }
+
+   /** public void score(int pScore, String pChoice){
+        if (Objects.equals(pChoice, "Simple Count")){
+            calculateScore(pScore);
+        }
+        else if (Objects.equals(pChoice, "Number Of Aces")){
+
+        }
+
+    }
+    */
 }
+

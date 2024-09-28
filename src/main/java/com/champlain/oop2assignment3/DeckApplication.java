@@ -25,7 +25,6 @@ public class DeckApplication extends Application {
         pStage.setScene(scene);
         pStage.show();
     }
-
     /**
      * Main method executed on launch.
      * @param pArgs Additional program arguments. Not used.
