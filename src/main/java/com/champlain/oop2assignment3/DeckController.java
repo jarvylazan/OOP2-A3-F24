@@ -90,11 +90,15 @@ public class DeckController {
             switch (choice) {
                 case "Rank First":
                     // TODO: Replace the following line of code.
-                    this.aDeckTextArea.setText("This does not sort by rank first yet.");
+//                    this.aDeckTextArea.setText("This does not sort by rank first yet.");
+                     Deck.sort(choice);
+                    this.displayCardCollections();
                     break;
                 case "Suit First":
                     // TODO: Replace the following line of code.
-                    this.aDeckTextArea.setText("This does not sort by suit first yet.");
+//                    this.aDeckTextArea.setText("This does not sort by suit first yet.");
+                    Deck.sort(choice);
+                    this.displayCardCollections();
                     break;
                 default:
                     this.aDeckTextArea.setText("This should not happen! You messed up.");
