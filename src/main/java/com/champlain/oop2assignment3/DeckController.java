@@ -117,7 +117,7 @@ public class DeckController {
         } else {
             switch (choice) {
                 case "Simple Count":
-                    this.aScoreLabel.setText(" " + this.aHand.calculateScore(aHand));
+                    this.aScoreLabel.setText(String.valueOf(this.aHand.calculateScore(aHand)));
                     break;
 
                 case "Number Of Aces":
@@ -128,7 +128,7 @@ public class DeckController {
                             aceHand.addCard(card);
                         }
                     }
-                    this.aScoreLabel.setText(" " + aceHand.calculateScore(aceHand));
+                    this.aScoreLabel.setText(String.valueOf(aceHand.calculateScore(aceHand)));
                     break;
                 default:
                     this.aScoreLabel.setText("This should not happen! You messed up.");
