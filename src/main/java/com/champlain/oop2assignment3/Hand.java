@@ -53,4 +53,3 @@ public class Hand extends CardCollection implements ScoringStrategy {
         return score;
     }
 }
-
