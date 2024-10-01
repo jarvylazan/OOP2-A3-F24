@@ -47,8 +47,8 @@ public class Hand extends CardCollection implements ScoringStrategy {
     @Override
     public int calculateScore(CardCollection pCards) {
         int score = 0;
-        for (Card pCard : pCards) {
-            score = score + pCard.getRank().ordinal() + 1;
+        for (Card ignored : pCards) {
+            score++;
         }
         return score;
     }
