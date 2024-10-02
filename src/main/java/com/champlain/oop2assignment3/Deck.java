@@ -14,17 +14,23 @@ public class Deck extends CardCollection implements CardSource {
      * The list of cards in the deck.
      */
     private final List<Card> aCards = new ArrayList<>();
+    private static final Deck INSTANCE = new Deck();
+
 
     /**
      * Constructs a new Deck containing all standard playing cards.
      * The deck is initialized with one of each rank and suit combination.
      */
-    public Deck() {
+    private Deck() {
         for (Rank currentRank : Rank.values()) {
             for (Suit currentSuit : Suit.values()) {
                 this.aCards.add(new Card(currentRank, currentSuit));
             }
         }
+    }
+
+    public static Deck getInstance(){
+        return INSTANCE;
     }
 
     /**
@@ -41,13 +47,12 @@ public class Deck extends CardCollection implements CardSource {
         return myCard;
     }
 
-    public static void sort(String pChoice) {
-        if (Objects.equals(pChoice, "Rank First")){
-            Collections.sort(aCards, new RankFirstComparator());
-        }
-        else if (Objects.equals(pChoice, "Suit First")){
-            Collections.sort(aCards, new SuitFirstComparator());
-        }
+    public void sortByRank() {
+        Deck.getInstance().aCards.sort((new RankFirstComparator()));
+    }
+
+    public void sortBySuit() {
+        Deck.getInstance().aCards.sort((new SuitFirstComparator()));
     }
 
     public boolean isEmpty() {

@@ -5,6 +5,12 @@ import java.util.Comparator;
 public class SuitFirstComparator implements Comparator<Card> {
     @Override
     public int compare(Card pCard1, Card pCard2) {
-        return pCard1.getSuit().compareTo(pCard2.getSuit());
+        int suitComparison = pCard1.getSuit().compareTo(pCard2.getSuit());
+
+        if (suitComparison == 0) {
+            return pCard1.getRank().compareTo(pCard2.getRank());
+        }
+
+        return suitComparison;
     }
 }
