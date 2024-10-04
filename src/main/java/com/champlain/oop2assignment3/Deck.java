@@ -14,6 +14,7 @@ public class Deck extends CardCollection implements CardSource {
      * The list of cards in the deck.
      */
     private static final List<Card> aCards = new ArrayList<>();
+
     private static final Deck INSTANCE = new Deck();
 
 
@@ -45,6 +46,10 @@ public class Deck extends CardCollection implements CardSource {
         Card myCard = this.aCards.get(last);
         this.aCards.remove(last);
         return myCard;
+    }
+
+    public void sortBySuit() {
+        Deck.getInstance().aCards.sort((new SuitFirstComparator()));
     }
 
     public boolean isEmpty() {
