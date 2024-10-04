@@ -52,6 +52,10 @@ public class Deck extends CardCollection implements CardSource {
         Deck.getInstance().aCards.sort((new RankFirstComparator()));
     }
 
+    public void sortBySuit() {
+        Deck.getInstance().aCards.sort((new SuitFirstComparator()));
+    }
+
     public boolean isEmpty() {
         return this.aCards.isEmpty();
     }
