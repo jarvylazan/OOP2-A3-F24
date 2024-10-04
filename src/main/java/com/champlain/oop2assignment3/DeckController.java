@@ -89,8 +89,8 @@ public class DeckController {
         } else {
             switch (choice) {
                 case "Rank First":
-                    // TODO: Replace the following line of code.
-                    this.aDeckTextArea.setText("This does not sort by rank first yet.");
+                    aDeck.sortByRank();
+                    this.displayCardCollections();
                     break;
                 case "Suit First":
                     // TODO: Replace the following line of code.
