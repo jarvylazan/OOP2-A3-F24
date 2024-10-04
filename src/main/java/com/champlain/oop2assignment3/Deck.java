@@ -13,7 +13,7 @@ public class Deck extends CardCollection implements CardSource {
     /**
      * The list of cards in the deck.
      */
-    private static final List<Card> aCards = new ArrayList<>();
+    private final List<Card> aCards = new ArrayList<>();
 
     private static final Deck INSTANCE = new Deck();
 
