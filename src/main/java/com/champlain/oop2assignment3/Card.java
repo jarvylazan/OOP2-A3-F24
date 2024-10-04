@@ -53,4 +53,17 @@ public class Card {
     public String toString() {
         return this.getRank() + " of " + this.getSuit();
     }
+
+    @Override
+    public boolean equals(Object pObject) {
+        if (pObject == null) {
+            return false;
+        } else if (pObject == this) {
+            return true;
+        } else if (pObject.getClass() != this.getClass()) {
+            return false;
+        } else {
+            return aRank == ((Card) pObject).aRank && ((Card) pObject).aSuit == aSuit;
+        }
+    }
 }
