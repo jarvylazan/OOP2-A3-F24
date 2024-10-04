@@ -19,6 +19,13 @@ public class DeckApplication extends Application {
      */
     @Override
     public void start(Stage pStage) throws IOException {
+        Card card1 = new Card(Rank.ACE, Suit.CLUBS);
+        Card card2 = new Card(Rank.ACE, Suit.CLUBS);
+        Card card3 = new Card(Rank.KING, Suit.DIAMONDS);
+
+        System.out.println("Are cards 1 and 2 equal? " + card1.equals(card2));
+        System.out.println("Are cards 2 and 3 equal? " + card2.equals(card3));
+
         FXMLLoader fxmlLoader = new FXMLLoader(DeckApplication.class.getResource("deck-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 530, 340);
         pStage.setTitle("Hello!");
